@@ -53,13 +53,7 @@ ul {
 a {
     text-decoration: none;
 }
-/*
-h1 {
-    margin: var(--size-s);
-    font-weight: var(--font-weight--thin);
-    width: 40%;
-}
-*/
+
 /* grid */
 .grid-container {
     display: grid;
@@ -149,6 +143,14 @@ header p {
     }
 }
 
+.avatar {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: var(--br--round);
+    margin-left: .3em;
+}
+
+/* Dropdown menu */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -180,13 +182,6 @@ header p {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display:block;
-}
-
-.avatar {
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: var(--br--round);
-    margin-left: .3em;
 }
 
 /* sidenav */
