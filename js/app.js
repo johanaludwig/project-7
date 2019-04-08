@@ -83,8 +83,8 @@ let myDonutChart = new Chart(donutChart, {
     datasets: [{
         data: [15, 20, 60],
         backgroundColor: ['#8dd490', "#2eb5b5", "#7477BF"],
-          borderWidth: 0
-      }]
+        borderWidth: 0
+    }]
   },
   options: {
     legend: {
@@ -116,7 +116,6 @@ closebtn.addEventListener('click', () => {
 });
 
 /* Notifications / dropdown menu */
-
 const notify = document.querySelector('.header__bellIcon--notify');
 const dropdownbtn = document.querySelector('.dropdownbtn');
 
@@ -124,6 +123,33 @@ notify.addEventListener('click', () => {
   document.getElementById("myDropdown").classList.toggle("show");
 })
 
+/* Submit Message */
+let message = document.querySelector('.message__form');
+
+message.addEventListener('submit', e => {
+  e.preventDefault();
+  let input = message.querySelector('input').value;
+  let text = message.querySelector('textarea').value;
+  message.querySelector('input').value = '';
+  message.querySelector('textarea').value = '';
+
+  // Show confirmation message
+  if(input !== '' && text !== '') {
+    alert('Your message has been successfully sent');
+  }
+
+  // Show error message
+  if(input === '' && text !== ''){
+    alert('Please search for an User');
+
+  } else if (input !== '' && text === '') {
+    alert('Please enter a message for ' + input);
+
+  } else if (input === '' && text === ''){
+    alert('Please complete all required fields')
+  }
+  
+})
 
 
 
