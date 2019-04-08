@@ -150,6 +150,3 @@ message.addEventListener('submit', e => {
   }
   
 })
-
-
-
