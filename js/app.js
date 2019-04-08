@@ -133,7 +133,7 @@ message.addEventListener('submit', e => {
   message.querySelector('input').value = '';
   message.querySelector('textarea').value = '';
 
-  // Show confirmation message
+  // Show confirmation
   if(input !== '' && text !== '') {
     alert('Your message has been successfully sent');
   }
